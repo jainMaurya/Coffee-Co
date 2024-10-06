@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee & Co. - Interactive Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#Alogin").click(function()
+            {
+                if($("#email").val()=="admin@gmail.com" && $("#pwd").val()=="admin123")
+                {
+                    location.href="admin-management.html"
+                }
+                if($("#email").val()=="admin1@gmail.com" && $("#pwd").val()=="admin123")
+                {
+                    location.href="restaurant-management.html"
+                }
+                else
+                {
+                    $("#err").val()="Mail or password"
+                }
+            })
+        })
+    </script>
+    <style>
+        .carousel-inner {
+            height: 100vh;
+        }
+
+        .carousel-item img {
+            height: 100vh;
+            object-fit: cover;
+            width: 100%;
+        }
+        #theory{
+            margin-top: 20px;
+            padding-top:20px ;
+            background-color: #f7f1e9;
+            border-radius: 20px;
+            padding-bottom: 40px;
+        }
+        #thimg{
+            background-image: url(pics/Our-Story.jpg);
+            height: 480px;
+            border-radius: 20px;
+           
+
+        }
+        #thtxt{
+            padding-top: 40px;
+            padding-left: 80px;
+            padding-right: 110px;
+        }
+        #thtxt h2{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: rgb(42, 12, 12);
+        }
+        #thtxt p{
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            unicode-bidi: isolate;
+            line-height: 25px;
+            font-size: 20px;
+            font-family: Montserrat-Medium;   
+        }
+        
+        #gameimg{
+            background-image: url(pics/quotgroup-friends-enjoying.avif);
+            background-size: cover; 
+    background-position: center; 
+    border-radius: 20px;
+        }
+        .social-media {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .social-media h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons a img {
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="pics/WhatsApp Image 2024-10-05 at 23.40.18_0869e8ef.jpg" height="50" alt="Coffee & Co. logo">
+                <a class="navbar-brand" href="#">Coffee & Co.</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/thisis">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/menu">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contactus">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex me-2">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <a href="/login" class="btn btn-outline-light">Login</a> 
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="carouselExampleRide" class="carousel slide"  data-bs-ride="carousel" data-bs-interval="2400">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="pics/coffee and co.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <a href="qr_opening.html"><img src="pics/MENU.png" class="d-block w-100" alt="..."></a>
+                
+            </div>
+            <div class="carousel-item">
+                <img src="pics/cafe image.webp" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container-fluid" style="margin-bottom: 20px;">
+        <div class="row">
+            <div class="col-md-10 offset-md-1" id="theory">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6" id="thimg">
+                        </div>
+                        <div class="col-md-6" id="thtxt">
+                            <h2>OUR STORY</h2>
+                            <p>Established in the year 2000, <i>Coffee & Co.</i> Company is the pioneer of coffee culture in India. The <i>Coffee & Co.</i> chain delivers a true coffee experience in a warm, friendly, and relaxed environment. It provides a comfortable place for people to unwind over interesting conversations and a hot cup of coffee. Besides India, Our cafés are located across the islands of Sri Lanka and Maldives.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid" style="margin-bottom: 20px;">
+        <div class="row">
+            <div class="col-md-10 offset-md-1" id="theory" >
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6" id="gameimg">
+                            
+                        </div>
+                        <div class="col-md-6" id="thtxt">
+                            <h2>ICEBREAKER GAMES</h2>
+                            <p>
+                                At <i>Coffee & Co.</i>, we believe that great conversations are the cornerstone of building meaningful relationships. That’s why we’ve introduced our exclusive collection of Icebreaker Games, designed to spark engaging dialogues between friends, strangers, or even first-time visitors.
+                                <br><br>
+                                Whether it’s a lighthearted trivia game, a fun social challenge, or a brain-teasing puzzle, there’s something for everyone.With every sip of coffee, the games aim to bridge gaps and create memories that last.
+                            </p>
+                            <a href="/drunklove" class="btn btn-dark">Drunk Love</a>
+                            <a href="/truthdare" class="btn btn-dark">Truth & Dare</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="bg-dark text-light pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Coffee & Co.</h5>
+                    <p>
+                        Established in 2000, Coffee & Co. is your go-to spot for premium coffee and unforgettable experiences. We serve customers in India, Sri Lanka, and the Maldives, providing a cozy atmosphere to enjoy great coffee and conversations.
+                    </p>
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#login">Admin Login</button>
+                </div>
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/menu" class="text-light">Menu</a></li>
+                        <li><a href="/aboutus" class="text-light">About Us</a></li>
+                        <li><a href="/contactus" class="text-light">Contact Us</a></li>
+                        <li><a href="/faq" class="text-light">FAQ</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Social Media Section -->
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div class="social-media">
+                        <div class="social-icons">
+                            <a href="#"><img src="pics/fbindex.png" alt="Facebook"></a>
+                            <a href="#"><img src="pics/insta2.jpeg" alt="Instagram"></a>
+                            <a href="#"><img src="pics/twitter.png" alt="Twitter"></a>
+                            <a href="#"><img src="pics/linkedin.png" alt="Twitter"></a>
+                            
+                        </div>
+                        </div>
+                </div>
+    
+                <!-- Contact Info Section -->
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Coffee Street, Mumbai, India</p>
+                    <p><i class="fas fa-phone"></i> +91 123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> support@coffeeandco.com</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Bottom Section -->
+        <div class="text-center mt-4">
+            <p>&copy; 2024 Coffee & Co. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container mt-3">
+                    <form action="/action_page.php">
+                      <div class="mb-3 mt-3">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                      </div>
+                      <div class="mb-3 mt-3">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="password">
+                      </div>
+                      <div class="mb-3 mt-3">
+                        <label for="password2">Comfirm Password:</label>
+                        <input type="password" class="form-control" id="pwd2" placeholder="Enter Password" name="password2">
+                      </div>
+                      <div><span id="err"></span></div>
+                    <input type="button" class="btn btn-primary" id="Alogin" value="Login">
+                    <!-- <button class="btn btn-primary" id="sBtn">Sign up</button> -->
+                  </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

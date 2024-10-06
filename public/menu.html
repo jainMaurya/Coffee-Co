@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee & Co. - Interactive Experience</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1cad54f882.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="pics/WhatsApp Image 2024-10-05 at 23.40.18_0869e8ef.jpg" height="50" alt="Coffee & Co. logo">
+                <a class="navbar-brand" href="#">Coffee & Co.</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active"  href="/thisis">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/menu">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contactus">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex me-2">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                    <a href="/login" class="btn btn-outline-light">Login</a> 
+                </div>
+            </div>
+        </nav>
+    </header>
+    <input type="checkbox" id="checkbox-cover">
+    <input type="checkbox" id="checkbox-page1">
+    <input type="checkbox" id="checkbox-page2">
+    <input type="checkbox" id="checkbox-page3">
+    <input type="checkbox" id="checkbox-page4">
+    <div class="book">
+        <div class="cover">
+            <label for="checkbox-cover"><img src="pics\WhatsApp Image 2024-10-06 at 15.24.23_aef7ef98.jpg"></label>
+        </div>
+        <div class="back-page">
+            <img src="pics\classic-american-breakfast-on-rustic-wooden-table-isolated-on-a-white-background-photo.jpg" alt="Breakfast Image">
+            <label class="prev" for="checkbox-page1"><i class="fas fa-chevron-left"></i></label>
+        </div>
+        <div class="page" id="page1">
+            <div class="front-page">
+                <h2>Coffees</h2>
+                <div class="menu-item">
+                    <span>Espresso - ₹80</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Espresso', 80)">-</button>
+                        <span class="quantity" id="Espresso-qty">0</span>
+                        <button onclick="increaseQuantity('Espresso', 80)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span>Americano - ₹90</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Americano', 90)">-</button>
+                        <span class="quantity" id="Americano-qty">0</span>
+                        <button onclick="increaseQuantity('Americano', 90)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span>Cappuccino - ₹120</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Cappuccino', 120)">-</button>
+                        <span class="quantity" id="Cappuccino-qty">0</span>
+                        <button onclick="increaseQuantity('Cappuccino', 120)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span>Latte - ₹130</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Latte', 130)">-</button>
+                        <span class="quantity" id="Latte-qty">0</span>
+                        <button onclick="increaseQuantity('Latte', 130)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span>Mocha - ₹150</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Mocha', 150)">-</button>
+                        <span class="quantity" id="Mocha-qty">0</span>
+                        <button onclick="increaseQuantity('Mocha', 150)">+</button>
+                    </div>
+                </div>
+                <label class="next" for="checkbox-page1"><i class="fas fa-chevron-right"></i></label>
+            </div>
+            <div class="back-page">
+                <img src="pics\dessert.png" alt="Breakfast Image">
+                <label class="prev" for="checkbox-page1"><i class="fas fa-chevron-left"></i></label>
+            </div>
+        </div>
+        <div class="page" id="page2">
+            <div class="front-page">
+                <h2>Desserts </h2>
+                <div class="menu-item">
+                    <span>Chocolate Cake - ₹150 per slice</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Chocolate Cake', 150)">-</button>
+                        <span class="quantity" id="ChocolateCake-qty">0</span>
+                        <button onclick="increaseQuantity('Chocolate Cake', 150)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span>Cheesecake - ₹200 per slice</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Cheesecake', 200)">-</button>
+                        <span class="quantity" id="Cheesecake-qty">0</span>
+                        <button onclick="increaseQuantity('Cheesecake', 200)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span>Tiramisu - ₹250 per slice</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Tiramisu', 250)">-</button>
+                        <span class="quantity" id="Tiramisu-qty">0</span>
+                        <button onclick="increaseQuantity('Tiramisu', 250)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span>Mango Pudding - ₹120 </span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Mango Pudding', 120)">-</button>
+                        <span class="quantity" id="MangoPudding-qty">0</span>
+                        <button onclick="increaseQuantity('Mango Pudding', 120)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span>Choco Lava Cake - ₹180</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Choco Lava Cake', 180)">-</button>
+                        <span class="quantity" id="ChocoLavaCake-qty">0</span>
+                        <button onclick="increaseQuantity('Choco Lava Cake', 180)">+</button>
+                    </div>
+                </div>
+                <label class="next" for="checkbox-page2"><i class="fas fa-chevron-right"></i></label>
+            </div>
+            <div class="back-page">
+                <img src="pics\bevrages.png" alt="Breakfast Image">
+                <label class="prev" for="checkbox-page2"><i class="fas fa-chevron-left"></i></label>
+            </div>
+        </div>
+        <div class="page" id="page3">
+            <div class="front-page">
+                <h2>Beverages</h2>
+                <div class="menu-item">
+                    <span>Mojito - ₹400</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Mojito', 400)">-</button>
+                        <span class="quantity" id="Mojito-qty">0</span>
+                        <button onclick="increaseQuantity('Mojito', 400)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span>Pina Colada - ₹450</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Pina Colada', 450)">-</button>
+                        <span class="quantity" id="PinaColada-qty">0</span>
+                        <button onclick="increaseQuantity('Pina Colada', 450)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span>Whiskey Sour - ₹500</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Whiskey Sour', 500)">-</button>
+                        <span class="quantity" id="WhiskeySour-qty">0</span>
+                        <button onclick="increaseQuantity('Whiskey Sour', 500)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span>Margarita - ₹500</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Margarita', 500)">-</button>
+                        <span class="quantity" id="Margarita-qty">0</span>
+                        <button onclick="increaseQuantity('Margarita', 500)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <span>Long Island Iced Tea - ₹550</span>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity('Long Island Iced Tea', 550)">-</button>
+                        <span class="quantity" id="LongIslandIcedTea-qty">0</span>
+                        <button onclick="increaseQuantity('Long Island Iced Tea', 550)">+</button>
+                    </div>
+                </div>
+                <label class="next" for="checkbox-page3"><i class="fas fa-chevron-right"></i></label>
+            </div>
+            <div class="back-page">
+                <img src="pics\WhatsApp Image 2024-10-06 at 15.38.42_0493d01e.jpg" alt="Breakfast Image">
+                <label class="prev" for="checkbox-page3"><i class="fas fa-chevron-left"></i></label>
+            </div>
+        </div>
+        <div class="back-cover"></div>
+    </div>
+
+
+    <div class="cart-section" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <div class="cart-details" id="cart-details">
+            <h3>Your Cart</h3>
+            <div id="cart-items"></div>
+            <div class="total-price" id="total-price">Total: ₹0.00</div>
+            <button class="btn btn-outline-success btn-sm">Place Order</button>
+        </div>
+    </div>
+    
+    <script>
+        let cart = [];
+        let totalPrice = 0;
+
+        function increaseQuantity(itemName, itemPrice) {
+            let item = cart.find(cartItem => cartItem.name === itemName);
+            if (item) {
+                item.quantity++;
+            } else {
+                cart.push({ name: itemName, price: itemPrice, quantity: 1 });
+            }
+            totalPrice += itemPrice;
+            updateCart();
+            document.getElementById(itemName.replace(/\s+/g, '') + '-qty').textContent = item ? item.quantity : 1;
+        }
+
+        function decreaseQuantity(itemName, itemPrice) {
+            let item = cart.find(cartItem => cartItem.name === itemName);
+            if (item && item.quantity > 0) {
+                item.quantity--;
+                totalPrice -= itemPrice;
+                if (item.quantity === 0) {
+                    cart = cart.filter(cartItem => cartItem.name !== itemName);
+                }
+                updateCart();
+                document.getElementById(itemName.replace(/\s+/g, '') + '-qty').textContent = item.quantity > 0 ? item.quantity : 0;
+            }
+        }
+
+        function updateCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `<span>${item.name} (${item.quantity})</span><span>₹${(item.price * item.quantity).toFixed(2)}</span>`;
+                cartItemsContainer.appendChild(cartItem);
+            });
+
+            document.getElementById('total-price').textContent = `Total: ₹${totalPrice.toFixed(2)}`;
+        }
+
+        function toggleCart() {
+            const cartDetails = document.getElementById('cart-details');
+            cartDetails.style.display = cartDetails.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+

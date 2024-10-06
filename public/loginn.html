@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="loginstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script>
+    $(document).ready(function() {
+        $("#sBtn").click(function() {
+            let obj = {
+                type: "get",
+                url: "/add-user",
+                data: {
+                  email: $("#email").val(),
+                  restroname: $("#restroname").val(),
+                  pwd: $("#pwd").val(),
+                  name:$("#name").val(),
+                  location:$("#location").val()
+
+                }
+              }
+              $.ajax(obj).done(function (jsonAry) {
+                $("#err").html(jsonAry)
+              }).fail(function (err) {
+                alert(err.statusText);
+              })
+        });
+
+        $("#login").click(function() {
+            let obj = {
+                type: "get",
+                url: "/search-user",
+                data: {
+                  email2: $("#email2").val(),
+                  password: $("#password").val(),
+
+                }
+              }
+              $.ajax(obj).done(function (jsonAry) {
+                if(jsonAry=="Successfull")
+                {
+                  location.href="admindash.html"
+                }
+                $("#errA").html(jsonAry)
+              }).fail(function (err) {
+                alert(err.statusText);
+              })
+        });
+    });
+</script>
+</head>
+<body>
+    <div class="login-container">        
+        <div class="left-section">
+            <div class="content">
+                <img src="pics\IMG-20241005-WA0025[1].jpg" alt="Lovebirds Illustration" class="illustration">
+                <h2>A perfect place to relax and enjoy your favorite brew.</h2>
+                <p>At Coffee Corner, we pride ourselves on using the finest organic beans and crafting the perfect cup to start your day or wind down after a long one.</p>
+            </div>
+        </div>    
+        <div class="right-section">
+            <div class="form-container">
+                <h1>Coffee & Co.</h1>
+                <h3>Welcome to Lovebirds</h3>
+                <form action="#">
+                    <label for="email2">Username or Email</label>
+                    <input type="text" id="email2" name="email2" placeholder="David Brooks" required>
+                    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <span id="errA">*</span>
+                    <div class="forgot-password">
+                        <a href="#">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="signin-btn" id="login" >Sign in</button>
+
+                    <div class="or-divider">
+                        <span>or</span>
+                    </div>
+
+                    <button type="button" class="google-btn">
+                        <img src="https://your-image-url.com/google-icon.png" alt="Google Icon"> Sign in with Google
+                    </button>
+                    <div class="create-account">
+                        <p>New to Coffee & Co.? <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#signup">Create Account</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Sign Up</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container mt-3">
+                <form action="/action_page.php">
+                  <div class="mb-3 mt-3">
+                    <label for="restroname">Restaurant Name:</label>
+                    <input type="text" class="form-control" id="restroname" placeholder="Restaurant Name" name="restroname">
+                  </div>
+                  <div class="mb-3">
+                    <label for="name">Name:</label>
+                    <input type="txt" class="form-control" id="name" placeholder="Enter Name" name="name">
+                  </div>
+                  <div class="mb-3 mt-3">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                  </div>
+                  <div class="mb-3 mt-3">
+                    <label for="location">Location:</label>
+                    <input type="text" class="form-control" id="location" placeholder="Enter Location" name="location">
+                  </div>
+                  <div class="mb-3 mt-3">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="password">
+                  </div>
+                  <div class="mb-3 mt-3">
+                    <label for="password2">Comfirm Password:</label>
+                    <input type="password" class="form-control" id="pwd2" placeholder="Enter Password" name="password2">
+                  </div>
+                  <span id="err"></span>
+                <input type="button" class="btn btn-primary" id="sBtn" value="Sign Up">
+                <!-- <button class="btn btn-primary" id="sBtn">Sign up</button> -->
+              </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

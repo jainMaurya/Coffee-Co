@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Management</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color:rgb(41, 32, 32);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://images.unsplash.com/photo-1568634733047-8bbfbcae7c46'); /* Coffee background */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding: 20px; /* Space around the content */
+    }
+
+    .admin-container {
+      background-color: rgba(255, 255, 255, 0.9); 
+      width: 80%;
+      max-width: 1200px;
+      padding: 30px;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      border-radius: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    
+
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .admin-header h1 {
+      font-size: 2.5rem;
+      color: #333;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 300px; /* Adjust width as needed */
+      margin-right: 10px;
+    }
+
+    .search-btn {
+      padding: 10px 20px;
+      background-color: #6b4226;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-btn:hover {
+      background-color: #4a2d1b;
+    }
+
+    .admin-list {
+      margin-top: 20px;
+    }
+
+    .admin-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: border 0.3s;
+    }
+
+    .admin-item:hover {
+      border: 1px solid #6b4226;
+      background-color: #f9f9f9;
+    }
+
+    .admin-index,
+    .admin-name,
+    .admin-location,
+    .admin-status {
+      font-size: 1.2rem;
+      color: #333;
+      width: 15%; /* Adjust the width as needed */
+    }
+
+    .admin-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .block-btn,
+    .resume-btn,
+    .delete-btn {
+      padding: 8px 15px;
+      background-color: black;
+      color: #fff;
+      border: 2px solid #6b4226; /* Border color */
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .block-btn:hover,
+    .resume-btn:hover,
+    .delete-btn:hover {
+      background-color: #4a2d1b;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <header class="admin-header">
+      <marquee><h1>Admin Management</h1></marquee>
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search Admins...">
+        <button class="search-btn">Search</button>
+      </div>
+    </header>
+
+    <!-- Admin List -->
+    <div class="admin-list">
+      <div class="admin-item">
+        <span class="admin-index">1</span>
+        <span class="admin-name">John Doe</span>
+        <span class="admin-location">Downtown Cafe</span>
+        <span class="admin-status">1</span>
+        <div class="admin-actions">
+          <button class="block-btn">Block</button>
+          <button class="resume-btn">Resume</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+
+      <div class="admin-item">
+        <span class="admin-index">2</span>
+        <span class="admin-name">Jane Smith</span>
+        <span class="admin-location">Uptown Bistro</span>
+        <span class="admin-status">1</span>
+        <div class="admin-actions">
+          <button class="block-btn">Block</button>
+          <button class="resume-btn">Resume</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+
+      <div class="admin-item">
+        <span class="admin-index">3</span>
+        <span class="admin-name">Alice Johnson</span>
+        <span class="admin-location">City Central</span>
+        <span class="admin-status">1</span>
+        <div class="admin-actions">
+          <button class="block-btn">Block</button>
+          <button class="resume-btn">Resume</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+
+      <div class="admin-item">
+        <span class="admin-index">4</span>
+        <span class="admin-name">Bob Brown</span>
+        <span class="admin-location">Westside Cafe</span>
+        <span class="admin-status">1</span>
+        <div class="admin-actions">
+          <button class="block-btn">Block</button>
+          <button class="resume-btn">Resume</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+
+      <div class="admin-item">
+        <span class="admin-index">5</span>
+        <span class="admin-name">Charlie White</span>
+        <span class="admin-location">East End Diner</span>
+        <span class="admin-status">1</span>
+        <div class="admin-actions">
+          <button class="block-btn">Block</button>
+          <button class="resume-btn">Resume</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+
+      <div class="admin-item">
+        <span class="admin-index">6</span>
+        <span class="admin-name">Diana Green</span>
+        <span class="admin-location">South Park Cafe</span>
+        <span class="admin-status">1</span>
+        <div class="admin-actions">
+          <button class="block-btn">Block</button>
+          <button class="resume-btn">Resume</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+
+      <div class="admin-item">
+        <span class="admin-index">7</span>
+        <span class="admin-name">Eva Blue</span>
+        <span class="admin-location">Northside Grill</span>
+        <span class="admin-status">1</span>
+        <div class="admin-actions">
+          <button class="block-btn">Block</button>
+          <button class="resume-btn">Resume</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+
+      <div class="admin-item">
+        <span class="admin-index">8</span>
+        <span class="admin-name">Frank Yellow</span>
+        <span class="admin-location">Sunny Cafe</span>
+        <span class="admin-status">1</span>
+        <div class="admin-actions">
+          <button class="block-btn">Block</button>
+          <button class="resume-btn">Resume</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restaurant Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            padding: 20px;
+            background-image: url('https://images.unsplash.com/photo-1568634733047-8bbfbcae7c46');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background: linear-gradient(110deg, #4b2e2c 0%, #000000 170%);
+            background-repeat: repeat;
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in-out; /* Animation for content */
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1.welcome {
+            font-size: 2.5rem;
+            color: #6b4226;
+            margin-bottom: 10px;
+        }
+
+        /* Button Styles */
+        .restaurant-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #6b4226;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #4a2d1b;
+            transform: scale(1.05); 
+        }
+
+        .restaurant-list {
+            margin-top: 20px;
+        }
+
+        .restaurant-list h3 {
+            margin-bottom: 10px;
+            text-align: center;
+            color: #6b4226;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            position: relative; 
+        }
+
+        th {
+            background-color: #6b4226; 
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #f1e9e0; 
+        }
+
+    
+        .rating {
+            color: gold;
+        }
+
+        
+        .hover-card {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            width: 200px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            animation: fadeIn 0.3s ease-in-out; 
+        }
+
+       
+        td:hover .hover-card {
+            display: block;
+        }
+
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px; 
+            }
+
+            button {
+                width: 100%;
+                margin: 5px 0; 
+            }
+
+            .content {
+                width: 100%;
+                padding: 20px; 
+            }
+
+            h1.welcome {
+                font-size: 2rem; 
+            }
+        }
+
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="content">
+        <header>
+            <h1 class="welcome">Restaurant Management</h1>
+        </header>
+
+        <section id="restaurant-management">
+            <h2>Manage Your Restaurants</h2>
+            <div class="restaurant-actions">
+                <button>Add New Restaurant</button>
+                <button>Update Menu</button>
+            </div>
+            <div class="restaurant-list">
+                <h3>Current Restaurants</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Restaurant Name</th>
+                            <th>Average Customers/Day</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Downtown Coffee
+                                <div class="hover-card">
+                                    <h4>Top Selling Coffees:</h4>
+                                    <p>Espresso - $3</p>
+                                    <p>Latte - $4</p>
+                                    <p>Mocha - $4.5</p>
+                                </div>
+                            </td>
+                            <td>150</td>
+                            <td class="rating">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Central Plaza Cafe
+                                <div class="hover-card">
+                                    <h4>Top Selling Coffees:</h4>
+                                    <p>Americano - $2.5</p>
+                                    <p>Cappuccino - $3.5</p>
+                                    <p>Cold Brew - $4</p>
+                                </div>
+                            </td>
+                            <td>120</td>
+                            <td class="rating">⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Highland Espresso
+                                <div class="hover-card">
+                                    <h4>Top Selling Coffees:</h4>
+                                    <p>Espresso - $3</p>
+                                    <p>Flat White - $4</p>
+                                    <p>Affogato - $5</p>
+                                </div>
+                            </td>
+                            <td>80</td>
+                            <td class="rating">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Sunny Side Bistro
+                                <div class="hover-card">
+                                    <h4>Top Selling Coffees:</h4>
+                                    <p>Latte - $4</p>
+                                    <p>Coffee Blend - $3</p>
+                                    <p>Macchiato - $4.5</p>
+                                </div>
+                            </td>
+                            <td>90</td>
+                            <td class="rating">⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Mountain Peak Coffee
+                                <div class="hover-card">
+                                    <h4>Top Selling Coffees:</h4>
+                                    <p>Cold Brew - $4</p>
+                                    <p>Cappuccino - $3.5</p>
+                                    <p>Espresso - $3</p>
+                                </div>
+                            </td>
+                            <td>70</td>
+                            <td class="rating">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Cozy Corner Cafe
+                                <div class="hover-card">
+                                    <h4>Top Selling Coffees:</h4>
+                                    <p>Americano - $2.5</p>
+                                    <p>Latte - $4</p>
+                                    <p>Mocha - $4.5</p>
+                                </div>
+                            </td>
+                            <td>110</td>
+                            <td class="rating">⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Riverbank Cafe
+                                <div class="hover-card">
+                                    <h4>Top Selling Coffees:</h4>
+                                    <p>Cappuccino - $3.5</p>
+                                    <p>Espresso - $3</p>
+                                    <p>Flat White - $4</p>
+                                </div>
+                            </td>
+                            <td>130</td>
+                            <td class="rating">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Urban Grind
+                                <div class="hover-card">
+                                    <h4>Top Selling Coffees:</h4>
+                                    <p>Latte - $4</p>
+                                    <p>Americano - $2.5</p>
+                                    <p>Cold Brew - $4</p>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td class="rating">⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Quiet Place Espresso
+                                <div class="hover-card">
+                                    <h4>Top Selling Coffees:</h4>
+                                    <p>Espresso - $3</p>
+                                    <p>Flat White - $4</p>
+                                    <p>Cappuccino - $3.5</p>
+                                </div>
+                            </td>
+                            <td>95</td>
+                            <td class="rating">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

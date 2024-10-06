@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2f2f2;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;
+}
+
+
+.left-section {
+    background-color: #212429;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.left-section .content {
+    max-width: 400px;
+}
+
+.left-section .illustration {
+    width: 100%;
+    max-width: 300px;
+}
+
+.left-section h2 {
+    font-weight: 600;
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.left-section p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+
+.right-section {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+}
+
+.form-container h1 {
+    font-family: 'Cursive', sans-serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.form-container h3 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.form-container label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.forgot-password {
+    text-align: right;
+}
+
+.forgot-password a {
+    color: #666;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.signin-btn {
+    width: 100%;
+    background-color: #666;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.or-divider span {
+    background-color: #ffffff;
+    padding: 0 10px;
+    color: #999;
+}
+
+.google-btn {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.google-btn img {
+    margin-right: 10px;
+    height: 20px;
+}
+
+.create-account {
+    margin-top: 20px;
+}
+
+.create-account a {
+    color: #666;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-section {
+        padding: 20px;
+        height: 40vh;
+    }
+
+    .right-section {
+        height: auto;
+        padding: 20px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .left-section h2 {
+        font-size: 20px;
+    }
+
+    .left-section p {
+        font-size: 14px;
+    }
+
+    .form-container h1 {
+        font-size: 28px;
+    }
+
+    .form-container h3 {
+        font-size: 16px;
+    }
+
+    .form-container input {
+        padding: 8px;
+    }
+
+    .signin-btn, .google-btn {
+        padding: 10px;
+    }
+
+    .create-account p {
+        font-size: 14px;
+    }
+}

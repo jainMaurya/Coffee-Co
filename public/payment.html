@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: #e0e0e0;
+        }
+
+        .option img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .option span {
+            flex-grow: 1;
+            text-align: left;
+            margin-left: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Select Payment Option</h1>
+        <div class="option" onclick="alert('UPI selected!')">
+            <img src="https://img.icons8.com/ios-filled/50/000000/qr-code.png" alt="UPI">
+            <span>UPI</span>
+        </div>
+        <div class="option" onclick="alert('Cash on Delivery selected!')">
+            <img src="https://img.icons8.com/ios-filled/50/000000/money.png" alt="Cash on Delivery">
+            <span>Cash on Delivery</span>
+        </div>
+        <div class="option" onclick="alert('Debit Card selected!')">
+            <img src="https://img.icons8.com/ios-filled/50/000000/debit-card.png" alt="Debit Card">
+            <span>Debit Card</span>
+        </div>
+        <div class="option" onclick="alert('Net Banking selected!')">
+            <img src="https://img.icons8.com/ios-filled/50/000000/internet-banking.png" alt="Net Banking">
+            <span>Net Banking</span>
+        </div>
+        <div class="option" onclick="alert('Credit Card selected!')">
+            <img src="https://img.icons8.com/ios-filled/50/000000/credit-card.png" alt="Credit Card">
+            <span>Credit Card</span>
+        </div>
+    </div>
+
+</body>
+</html>
